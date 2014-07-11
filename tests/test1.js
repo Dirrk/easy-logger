@@ -6,7 +6,7 @@ var easylog = require('../lib/logger');
 
 console.log("Required");
 
-var logger = easylog.startGlobal();
+var logger = easylog.startGlobal({level: 1});
 
 
 function test() {
@@ -22,5 +22,7 @@ function test2() {
 
     var logger1 = easylog.startLocal({ name: 'test123'});
     logger1.warn("This is a warning");
+
+    logger.debug("Debug");
 }
 
